@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@* <div class="text-center"> *@
+@*     <h1 class="display-4">Welcome</h1> *@
+@*     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+@* </div> *@
+
+@model IEnumerable<PerformanceMonitoringDashboard.Models.MetricsModel>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Performance Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+    <h1>Performance Metrics</h1>
+    @if (Model != null && Model.Any())
+    {
+        <table id="metricsTable">
+            <thead>
+                <tr>
+                    <th>Metric Name</th>
+                    <th>Value</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var metric in Model)
+                {
+                    <tr>
+                        <td>@metric.MetricName</td>
+                        <td>@metric.Value</td>
+                        <td>@metric.Timestamp</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No metrics data available.</p>
+    }
+</body>
+</html>
+
