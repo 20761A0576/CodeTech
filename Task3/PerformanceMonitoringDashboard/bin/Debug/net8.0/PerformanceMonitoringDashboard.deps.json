@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PerformanceMonitoringDashboard/1.0.0": {
+        "runtime": {
+          "PerformanceMonitoringDashboard.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PerformanceMonitoringDashboard/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
